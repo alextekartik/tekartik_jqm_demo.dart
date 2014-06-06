@@ -1,5 +1,12 @@
 name: tekartik_jqm_demo
 description: Demo using tekartik_jqm
 dependencies:
+  polymer: any
   tekartik_jqm:
     path: ../tekartik_jqm.dart
+transformers:
+- polymer:
+    entry_points: 
+    - web/simplest_page_demo.html
+    - web/epoch_converter_demo.html
+
