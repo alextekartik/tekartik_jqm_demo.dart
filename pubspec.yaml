@@ -1,0 +1,5 @@
+name: tekartik_jqm_demo
+description: Demo using tekartik_jqm
+dependencies:
+  tekartik_jqm:
+    path: ../tekartik_jqm.dart
