@@ -1,33 +1,35 @@
 <link rel="import" href="packages/tekartik_jqm/jqm_page.html">
 <polymer-element name="epoch-converter-page" extends="jqm-page">
 <template>
-<div id="converter" data-role="page">
-
   <div data-role="header">
     <h1>EPOCH converter</h1>
   </div>
   <!-- /header -->
 
   <div role="main" class="ui-content">
+  <!--
     <p>
       Current EPOCH time<span id="current_epoch_time"></span>
     </p>
     <p>
       <span id="current_time_text"></span>
     </p>
+    -->
     <form>
       <label id="time_number_label" for="time_number_input">Enter
-        time in"</label> <input type="number" data-clear-btn="true"
+        time in millis since EPOCH</label> <input type="number" data-clear-btn="true"
         name="time_number_input" id="time_number_input" value="">
+     <!-- <jqm-datepicker-widget id="date_input">
+      </jqm-datepicker-widget>
+      -->
+        <label for="datetime_input">Or datetime</label>
+    <input type="datetime-local" data-clear-btn="false" name="datetime_input" id="datetime_input" value="">
+    <p id="error"></p>
     </form>
-    <a href="#jqm_demo">Demo</a>
+    <!--<a href="#jqm_demo">Demo</a>-->
   </div>
   <!-- /content -->
 
-  <div data-role="footer" data-position="fixed">
-    <h4>Footer content</h4>
-  </div>
   <!-- /footer -->
-</div>
 <!-- /page --> </template> <script type="application/dart"
   src="epoch_converter_page.dart"></script> </polymer-element>

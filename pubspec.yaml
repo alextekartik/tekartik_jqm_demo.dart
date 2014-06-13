@@ -3,7 +3,16 @@ description: Demo using tekartik_jqm
 dependencies:
   polymer: any
   tekartik_jqm:
+    git: https://github.com/alextekartik/tekartik_jqm.dart.git
+dependency_overrides:
+  tekartik_jqm:
     path: ../tekartik_jqm.dart
+  tekartik_jquery:
+    path: ../tekartik_jquery.dart
+  tekartik_utils:
+    path: ../tekartik_utils.dart
+  tekartik_jqm_asset:
+    path: ../tekartik_jqm_asset.dart
 transformers:
 - polymer:
     entry_points: 

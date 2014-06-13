@@ -6,20 +6,17 @@
 <title>simplest_page_demo</title>
 <link rel="import" href="packages/polymer/polymer.html">
 <link rel="import" href="epoch_converter_page.html">
-<link rel="import" href="packages/tekartik_jqm/jqm_app.html">
-<link rel="import" href="packages/tekartik_jqm/demo/jqm_demo_page.html">
-<script type="application/dart">export 'package:polymer/init.dart';</script>
-<link rel="stylesheet"
-  href="packages/tekartik_jqm_asset/jquery-mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-<script
-  src="packages/tekartik_jqm_asset/jquery/2.1.0/jquery-2.1.0.min.js"></script>
-<script
-  src="packages/tekartik_jqm_asset/jquery-mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<link rel="import" href="packages/tekartik_jqm/jqm_pagecontainer.html">
+<link rel="import" href="packages/tekartik_jqm/jqm_page.html">
+
+<!-- jqm -->
+<link rel="stylesheet" href="packages/tekartik_jqm/css/jquerymobile.css">
+<script type="application/dart">export 'package:tekartik_jqm/lazyloader.dart';</script>
+
 </head>
 <body>
-  <jqm-app> <jqm-pagecontainer> 
-  <epoch-converter-page></epoch-converter-page>
-  <jqm-demo-page></jqm-demo-page>
-  </jqm-pagecontainer> </jqm-app>
+  <jqm-pagecontainer> 
+  <epoch-converter-page id="main"></epoch-converter-page>
+  </jqm-pagecontainer>
 </body>
 </html>

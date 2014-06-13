@@ -1,0 +1,2 @@
+gsutil -m rsync -r . gs://gstest.tekartik.com/tekartik_jqm_demo
+gsutil -m acl -r set public-read gs://gstest.tekartik.com/tekartik_jqm_demo
