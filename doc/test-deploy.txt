@@ -1,2 +1,3 @@
-gsutil -m rsync -r . gs://gstest.tekartik.com/tekartik_jqm_demo
+# to run at the root of the project
+gsutil -m rsync -c -r build gs://gstest.tekartik.com/tekartik_jqm_demo
 gsutil -m acl -r set public-read gs://gstest.tekartik.com/tekartik_jqm_demo
