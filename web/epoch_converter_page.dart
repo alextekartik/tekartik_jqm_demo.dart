@@ -112,25 +112,16 @@ class EpochConverterPage extends JqmPage with PageHandleOnShow, PageHandleOnHide
 
     onDateTimeInputChange(_) {
       print('changing datetime input ${dateTimeInput.value}');
+      // Parse the text: valueAsNumber of a datetime-local input reads the
+      // local wall clock time as UTC (off by the UTC offset), while the other
+      // direction writes local time
       try {
-        //print('changing input ${dateTimeInput.value} ${dateTimeInput.valueAsDate} ${dateTimeInput.valueAsNumber}');
-        int ms = dateTimeInput.valueAsNumber.toInt();
-        DateTime dateTime = new DateTime.fromMillisecondsSinceEpoch(ms);
+        DateTime dateTime = DateTime.parse(dateTimeInput.value);
         timeNumberInput.valueAsNumber = dateTime.millisecondsSinceEpoch;
         $['error'].innerHtml = '';
       } catch (e, st) {
-        // For firefox handle string
-        try {
-          //print('changing input ${dateTimeInput.value} ${dateTimeInput.valueAsDate} ${dateTimeInput.valueAsNumber}');
-          DateTime dateTime = DateTime.parse(dateTimeInput.value);
-          timeNumberInput.valueAsNumber = dateTime.millisecondsSinceEpoch;
-          $['error'].innerHtml = '';
-        } catch (e, st) {
-          // For firefox handle string
-
-          print("$e $st");
-          $['error'].innerHtml = 'invalid date';
-        }
+        print("$e $st");
+        $['error'].innerHtml = 'invalid date';
       }
 
     }
